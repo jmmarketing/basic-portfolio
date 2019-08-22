@@ -57,7 +57,7 @@ div.contentBlock{
     margin:0 auto;
     background-color:#fff;
     border: solid 1px #ddd;
-    margin-bottom:auto; /*in this case it goes to the bottom of the page*/
+    margin-bottom:auto; /*This auto controls spacing between footer and bottom of the block*/
 }
 
 div.contentFormat{
