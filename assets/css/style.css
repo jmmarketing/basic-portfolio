@@ -5,8 +5,8 @@ body{
     font-family:'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     /*--This pushes sticky footer down when content is added*/
     min-height:100vh;
-    display:grid;
-    grid-template-rows: auto 1fr auto;
+    display:flex;
+    flex-direction:column;
 }
 
 /*-- Minor Aesthetics --*/
@@ -18,7 +18,10 @@ a:hover{
     font-weight:bold;
     color:darkgoldenrod;
 }
-
+ 
+#porfolioItem{
+    box-shadow:2px 2px 5px grey;
+}
 
 /*-- Navigation Bar Styling-- */
 div.navBar{
@@ -28,6 +31,11 @@ div.navBar{
     float:left;
     height: 75px;
     margin-bottom:30px;
+    box-shadow: 0 2px 5px grey;
+    /* Fixes Nav Bar to top, even on scroll*/
+    position:fixed;
+    top:0;
+    z-index: 1;
 }
 
 #navItems{
@@ -73,6 +81,8 @@ div.contentBlock{
     margin:0 auto;
     background-color:#fff;
     border: solid 1px #ddd;
+    margin-top:105px;
+    flex:0; /*allows box to grow or shrink based off content */
     margin-bottom:auto; /*This controls spacing between this block and next block (which is the footer in this case)*/
 }
 
@@ -161,7 +171,6 @@ td{
     opacity:1;
 }
 
-
 /*--END Body Content Styling--*/
 
 /*-- Start Footer Styling--*/
@@ -171,6 +180,7 @@ footer{
     border-top: solid 6px goldenrod;
     height: 60px;
     margin-top:50px; /* controls minimum margin between last block before footer*/
+    
 }
 
 footer p{
